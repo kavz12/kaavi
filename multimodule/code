@@ -1,0 +1,102 @@
+data engineering-data ingestion-data-trans-data-storage
+data ingestion-src-main-java-com-example-ingestion-app.java
+
+
+data-engineering
+  <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>data-engineering-project</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>data-ingestion</module>
+    <module>data-transformation</module>
+    <module>data-storage</module>
+  </modules>
+</project>
+
+    data-ingestion
+    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>data-engineering-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>data-ingestion</artifactId>
+  <dependencies>
+    <!-- Add dependencies specific to data ingestion -->
+  </dependencies>
+</project>
+
+    --------------------------
+
+    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>data-engineering-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>data-ingestion</artifactId>
+  <dependencies>
+    <!-- Example: Kafka dependency for data ingestion -->
+    <dependency>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka-clients</artifactId>
+      <version>3.5.1</version>
+    </dependency>
+  </dependencies>
+</project>
+
+
+    data-transformation
+
+    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>data-engineering-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>data-transformation</artifactId>
+  <dependencies>
+    <!-- Example: Spark dependency for data transformation -->
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-core_2.12</artifactId>
+      <version>3.4.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-sql_2.12</artifactId>
+      <version>3.4.1</version>
+    </dependency>
+  </dependencies>
+</project>
+
+    data-storage
+
+    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>data-engineering-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>data-storage</artifactId>
+  <dependencies>
+    <!-- Example: PostgreSQL dependency for data storage -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.6.0</version>
+    </dependency>
+  </dependencies>
+</project>
